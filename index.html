@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARMOR Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .authors {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .badges {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .section {
+            margin: 40px 0;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        <img src="assets/armor.png" alt="ARMO icon" class="icon" style="vertical-align: middle; display: inline-block; height: 1.2em;width: 1.2em;top: -0.15em">
+        <span style="color: #0066ff;">AR</span><span style="color: orange;">M</span>OR: 
+        Empowering <span style="color: #0066ff;">Autoregressive</span> 
+        <span style="color: orange;">Multimodal</span> Understanding Model with Interleaved Multimodal Generation via Asymmetric Synergy
+    </h1>
+
+    <div class="authors">
+        <strong>Jianwen Sun</strong><sup>1,2*</sup> · 
+        <strong>Yukang Feng</strong><sup>1,2*</sup> · 
+        <strong>Chuanhao Li</strong><sup>5</sup> · 
+        <strong>Fanrui Zhang</strong><sup>2,3</sup><br>
+        <strong>Zizhen Li</strong><sup>1,2</sup> ·
+        <strong>Jiaxin Ai</strong><sup>2,4</sup> · 
+        <strong>Sizhuo Zhou</strong><sup>2,3</sup> · 
+        <strong>Pengfei Zhou</strong><sup>5</sup><br>
+        <strong>Yu Dai</strong><sup>1</sup> · 
+        <strong>Shenglin Zhang</strong><sup>1</sup> · 
+        <strong>Kaipeng Zhang</strong><sup>2,5†</sup><br><br>
+        
+        <sup>1</sup>Nankai University
+        <sup>2</sup>Shanghai Innovation Institute<br>
+        <sup>3</sup>University of Science and Technology of China
+        <sup>4</sup>WUHAN University<br>
+        <sup>5</sup>Shanghai AI Laboratory<br><br>
+        
+        *equal contribution  †corresponding author
+    </div>
+
+    <div class="badges">
+        <a href="https://arxiv.org/abs/2503.06542" style="display: inline-block; margin-right: 10px;"><img
+                src='https://img.shields.io/badge/arXiv-ARMOR-red' alt='Paper PDF'></a>
+        <a href="#" style="display: inline-block; margin-right: 10px;"><img
+                src='https://img.shields.io/badge/Project_Page-ARMOR-green' alt='Project Page'></a>
+        <a href="#" style="display: inline-block; margin-right: 10px;"><img
+                src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-blue'></a>
+    </div>
+
+    <img src="assets/chat.png" alt="Chat Example" style="width: 90%;">
+
+    <div class="section">
+        <h1>💡 News</h1>
+        <p><strong> 🚀 2025/03/09:</strong> The technical report of <a href="#">ARMOR</a> is released! Our code will be released soon.</p>
+    </div>
+
+    <div class="section">
+        <h1>📖 Introduction</h1>
+        <p>This repo implements ARMOR, a unified visual tokenizer well-suited for both generation and understanding tasks. It operates within a single autoregressive framework to enable interleaved image-text inputs and outputs, autonomously selecting the most appropriate response modality depending on the query.</p>
+    </div>
+
+    <div class="section">
+        <h1> ⚙️ Overview</h1>
+        <img src="assets/architecture_armor.png" alt="Architecture" style="width: 90%;">        
+        <p>Armor is a unified understanding and generation model improved based on a multimodal large language model (MLLM). It operates within a single autoregressive framework to enable interleaved image-text inputs and outputs, autonomously selecting the most appropriate response modality depending on the query. Building upon a pretrained MLLM, Armor employs a unified embedding space to represent both textual and visual information, thus reducing model complexity, and introduces an asymmetric encoder-decoder to unify generation and understanding. Through training on a meticulously curated, high-quality dataset of interleaved text and images with our proposed What or How to Generate (WoHG) method, Armor not only preserves much of the original model’s capabilities but also achieves  impressive image generation performance. Coupled with a forward-switching mechanism, Armor enables highly natural text-image interleaved output, all while requiring minimal computational resources. The research findings indicate that enhancing a pretrained MLLM with an autoregressive architecture and an asymmetric encoder-decoder demonstrates substantial potential and research value for developing unified understanding and generation models. Furthermore, the results also reaffirm that a fully autoregressive approach remains a promising foundation for building unified large-scale model architectures.</p>
+    </div>
+
+    <div class="section">
+        <h1> 🏆 Experiment</h1>
+        <h2> Understanding Performance</h2>
+        <img src="assets/und_result.png" alt="Understanding Results">
+        <h2> Generation Performance</h2>
+        <img src="assets/gen_result.png" alt="Generation Results" width="420">
+    </div>
+
+    <div class="section">
+        <h1>📞 Contact</h1>
+        <ul>
+            <li>Jianwen Sun: <a href="mailto:sunjianwen@mail.nankai.edu.cn">sunjianwen@mail.nankai.edu.cn</a></li>
+            <li>Yukang Feng: <a href="mailto:yukangfeng@mail.nankai.edu.cn">yukangfeng@mail.nankai.edu.cn</a></li>
+            <li>Kaipeng Zhang: <a href="mailto:zhangkaipeng@pjlab.org.cn">zhangkaipeng@pjlab.org.cn</a></li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h1>🖊️ Citation</h1>
+        <pre>
+@misc{sun2025armorv01empoweringautoregressive,
+    title={ARMOR v0.1: Empowering Autoregressive Multimodal Understanding Model with Interleaved Multimodal Generation via Asymmetric Synergy}, 
+    author={Jianwen Sun and Yukang Feng and Chuanhao Li and Fanrui Zhang and Zizhen Li and Jiaxin Ai and Sizhuo Zhou and Yu Dai and Shenglin Zhang and Kaipeng Zhang},
+    year={2025},
+    eprint={2503.06542},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV},
+    url={https://arxiv.org/abs/2503.06542}, 
+}</pre>
+    </div>
+</body>
+</html>
